@@ -128,7 +128,28 @@ gem "logger"
 
 > `wdm`은 선택 사항이므로 없어도 서버 실행에는 영향 없음.
 
-~~(이 밖에도 gpt 친구와 함께 하면 설정에는 큰 어려움이 없을 것이다.)~~
+#### 🔸 branch 설정
+- 로컬(4000번 포트)에서는 블로그 내용이 잘 보였지만 git push 후 index를 읽지 못하는 문제 발생
+- index.html -> index.md : **확장자 변경**
+- action 수 차례 실패 후 우여곡절 끝에 성공 but! 테마가 적용되지 않는 문제 발생 😫
+  
+  <div style="flex: 1; text-align: center;">
+    <img src="/assets/images/setup/error.png" alt="빈 화면" style="height: 200px; object-fit: cover; border-radius: 8px;">
+  </div>
+
+- 기본 구조
+  -> main에 push 한 경우 gh-pages 브랜치에서 _site 폴더가 자동 빌드되게 해야함!
+  -> github 설정 바꿔주기
+  
+    <div style="flex: 1; text-align: center;">
+    <img src="/assets/images/setup/setting.png" alt="설정" style="height: 450px; object-fit: cover; border-radius: 8px;">
+  </div>
+- ✅ **GitHub > repo > Settings > Pages > Branch가 gh-pages로 설정!** 
+
+
+
+
+~~(이 밖에도 gpt 친구와 함께 하면 설정에는 큰 어려움이 없을 것이다. 그럼에도 어려웠다...)~~
 
 --- 
 
