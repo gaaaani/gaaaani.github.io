@@ -22,6 +22,7 @@ gem "jekyll-seo-tag"
 gem "jekyll-sitemap"
 gem "jekyll-paginate"
 gem "jekyll-spaceship"
+gem "jekyll-remote-theme"
 
 # Markdown 엔진
 gem "kramdown", ">= 2.3.1"

@@ -247,7 +247,7 @@ markdown: kramdown
 kramdown:
   input: GFM
 
-theme: jekyll-theme-yat
+remote_theme: jeffreytse/jekyll-theme-yat
 
 plugins:
   - jekyll-feed
@@ -255,3 +255,4 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-spaceship
+  - jekyll-remote-theme
