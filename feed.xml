@@ -1,4 +1,330 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://gaaaani.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gaaaani.github.io/" rel="alternate" type="text/html" /><updated>2025-07-28T06:58:00+00:00</updated><id>https://gaaaani.github.io/feed.xml</id><title type="html">My awesome …</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>gaaaani(Seo Gaeun)</name></author><entry><title type="html">GitHub Pages + Jekyll 블로그 만들기</title><link href="https://gaaaani.github.io/projects/2025/07/28/github-jekyll-setup.html" rel="alternate" type="text/html" title="GitHub Pages + Jekyll 블로그 만들기" /><published>2025-07-28T00:00:00+00:00</published><updated>2025-07-28T00:00:00+00:00</updated><id>https://gaaaani.github.io/projects/2025/07/28/github-jekyll-setup</id><content type="html" xml:base="https://gaaaani.github.io/projects/2025/07/28/github-jekyll-setup.html"><![CDATA[<p>개발 공부와 프로젝트 기록을 남기기 위한 기록용으로<br />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://gaaaani.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gaaaani.github.io/" rel="alternate" type="text/html" /><updated>2025-07-28T09:37:05+00:00</updated><id>https://gaaaani.github.io/feed.xml</id><title type="html">My awesome …</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>gaaaani(Seo Gaeun)</name></author><entry><title type="html">🍊 LLM 기반 제주여행 추천플랫폼 - 탐라,탐나</title><link href="https://gaaaani.github.io/projects/2025/07/28/2024-tamna.html" rel="alternate" type="text/html" title="🍊 LLM 기반 제주여행 추천플랫폼 - 탐라,탐나" /><published>2025-07-28T00:00:00+00:00</published><updated>2025-07-28T00:00:00+00:00</updated><id>https://gaaaani.github.io/projects/2025/07/28/2024-tamna</id><content type="html" xml:base="https://gaaaani.github.io/projects/2025/07/28/2024-tamna.html"><![CDATA[<h1 id="llm-기반-제주도-여행-계획-추천-서비스-탐라-탐나">LLM 기반 제주도 여행 계획 추천 서비스 ‘탐라, 탐나‘</h1>
+
+<p>스킬: Spring boot / LangChain / Pinecone / Flask
+프로젝트 타입: 교내프로젝트</p>
+
+<p><img src="%ED%83%90%ED%83%90%EC%9D%B4.png" alt="탐탐이.png" /></p>
+
+<aside>
+<images src="https://www.notion.so/icons/document_gray.svg" alt="https://www.notion.so/icons/document_gray.svg" width="40px" /> 목차
+
+</aside>
+
+<h3 id="프로젝트의-소개">프로젝트의 소개</h3>
+
+<p><strong>🍊 LLM 기반 제주도 여행 계획 추천 서비스 “탐라, 탐나”</strong></p>
+
+<ul>
+  <li>LLM과 RAG를 결하여 제주도를 여행하는 사용자들이 개인의 취향과 필요에 맞춘 여행 계획을 쉽게 세우고 실행할 수 있도록 돕는 플랫폼 개발</li>
+</ul>
+
+<hr />
+
+<h3 id="역할-및-기여">역할 및 기여</h3>
+
+<ul>
+  <li><strong>기획</strong>: 발표 PPT 제작, 보고서 작성, 설계도 및 아키텍쳐 문서화 작업.</li>
+  <li><strong>데이터 수집 및 전처리</strong>: 벡터 DB 구성에 필요한 데이터를 수집하고, 전처리함.</li>
+  <li><strong>벡터 DB 구성</strong>: Pinecone을 이용한 벡터형 데이터베이스를 구성, RAG 기능을 통해 LLM의 답변 성능 향상.</li>
+  <li><strong>백엔드 개발</strong>: 회원 기능을 개발하고 회원 세션 유지 로직 구현을 통해 사용자 경험을 강화.</li>
+  <li><strong>LLM 프롬포터 엔지니어링</strong>: 프롬포터 엔지니어링을 통해서 LLM 모델의 역할 제한 및 답변 성능 강화.</li>
+</ul>
+
+<hr />
+
+<h3 id="프로젝트-진행-과정">프로젝트 진행 과정</h3>
+
+<p><strong>개발 범위</strong></p>
+
+<ul>
+  <li><strong>플랫폼 기능</strong>:
+    <ul>
+      <li>여행 일정 추천: 사용자 정보를 기반으로 개인화된 여행 일정을 추천.</li>
+      <li>마이페이지: 사용자가 저장한 일정을 관리.</li>
+    </ul>
+  </li>
+  <li><strong>기술 스택</strong>:
+    <ul>
+      <li><strong>프론트엔드</strong>: React를 사용하여 동적인 사용자 경험을 제공.</li>
+      <li><strong>백엔드</strong>: Spring Boot와 Flask를 이용하여 RESTful API를 구축하고 안정적인 서버 환경을 구현.</li>
+      <li><strong>데이터베이스</strong>: MySQL과 Pinecone DB를 사용하여 사용자 데이터와 장소 정보를 체계적으로 관리.</li>
+      <li><strong>LLM 통합</strong>: OpenAI의 GPT를 활용하여 대화형 인터페이스와 로직을 구현.</li>
+    </ul>
+  </li>
+  <li>
+    <p>사용 데이터셋</p>
+
+    <p>RAG 활용을 위한 데이터셋 구성</p>
+
+    <ul>
+      <li>한국관광공사 관광지 데이터 활용</li>
+      <li>구글맵 관광지 데이터 크롤링</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="최종-결과물">최종 결과물</h3>
+
+<h3 id="개발-내용">개발 내용</h3>
+
+<p><img src="%25ED%259A%258C%25EC%259B%2590%25EA%25B0%2580%25EC%259E%2585_%25ED%2599%2594%25EB%25A9%25B4.png" alt="회원가입 페이지" /></p>
+
+<p>회원가입 페이지</p>
+
+<p><img src="image.png" alt="로그인 성공 화면" /></p>
+
+<p>로그인 성공 화면</p>
+
+<p><img src="image%201.png" alt="로그인 페이지" /></p>
+
+<p>로그인 페이지</p>
+
+<ul>
+  <li>로그인 및 회원가입 페이지
+    <ul>
+      <li>로그인 기능
+        <ul>
+          <li>사용자가 이메일과 비밀번호를 입력하여 로그인 가능</li>
+          <li>로그인 성공 시 메인 페이지로 자동 이동</li>
+        </ul>
+      </li>
+      <li>회원가입 기능
+        <ul>
+          <li>새로운 사용자가 이메일과 닉네임 및 비밀번호를 입력하여 계정 생성 가능</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="image%202.png" alt="메인 페이지" /></p>
+
+<p>메인 페이지</p>
+
+<ul>
+  <li>메인 페이지
+    <ul>
+      <li>제주도 추천 여행지 영상
+        <ul>
+          <li>메인 페이지에서 제주도의 추천 여행지 영상을 배치하여 사용자 흥미 유발</li>
+        </ul>
+      </li>
+      <li>주요 기능 바로 가기 버튼
+        <ul>
+          <li>마이페이지, 일정 추천, 로그아웃 기능으로 바로 이동할 수 있는 버튼 제공</li>
+          <li>사용자 편의성을 고려한 직관적인 네비게이션 구성</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="image%203.png" alt="여행 일정 추천 페이지 - 시작 화면" /></p>
+
+<p>여행 일정 추천 페이지 - 시작 화면</p>
+
+<p><img src="image%204.png" alt="여행 일정 추천 페이지 - 사용자 초기 입력" /></p>
+
+<p>여행 일정 추천 페이지 - 사용자 초기 입력</p>
+
+<p><img src="image%205.png" alt="여행 일정 추천 페이지 - 일정 생성 중" /></p>
+
+<p>여행 일정 추천 페이지 - 일정 생성 중</p>
+
+<p><img src="image%206.png" alt="여행 일정 추천 페이지 - 일정 추천 완료" /></p>
+
+<p>여행 일정 추천 페이지 - 일정 추천 완료</p>
+
+<ul>
+  <li>여행 일정 추천 페이지
+    <ul>
+      <li>사용자 초기 입력 기능
+        <ul>
+          <li>사용자가 여행 일정(날짜), 동반자, 테마를 초기 입력값으로 선택 가능</li>
+          <li>테마는 다중 선택 가능(예: 힐링, 모험, 문화 등)</li>
+        </ul>
+      </li>
+      <li>여행 일정 추천 기능
+        <ul>
+          <li>입력된 초기 데이터를 기반으로 LLM을 활용해 개인화된 여행 일정 추천 제공</li>
+          <li>사용자는 버튼 클릭으로 간편하게 여행 일정을 추천받을 수 있음</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="image%207.png" alt="상세 일정 페이지 - 여행 요약" /></p>
+
+<p>상세 일정 페이지 - 여행 요약</p>
+
+<p><img src="image%208.png" alt="상세 일정 페이지 - 상세 일정" /></p>
+
+<p>상세 일정 페이지 - 상세 일정</p>
+
+<p><img src="image%209.png" alt="상세 일정 페이지 - 길찾기" /></p>
+
+<p>상세 일정 페이지 - 길찾기</p>
+
+<p><img src="image%2010.png" alt="상세 일정 페이지 - 경로" /></p>
+
+<p>상세 일정 페이지 - 경로</p>
+
+<ul>
+  <li>상세 일정 페이지
+    <ul>
+      <li>상세 여행지 정보 제공
+        <ul>
+          <li>일정에 포함된 여행지에 대해 이미지, 주소, 카테고리(예: 관광지, 음식점 등)와 같은 상세 정보 제공</li>
+        </ul>
+      </li>
+      <li>여행 일정 요약
+        <ul>
+          <li>추천된 일정의 전체 개요를 한눈에 확인할 수 있는 기능 제공</li>
+          <li>일자별로 여행지와 활동이 정리된 요약 정보 표시</li>
+        </ul>
+      </li>
+      <li>여행 경로 확인
+        <ul>
+          <li>선택된 여행지 간 이동 경로를 카카오 맵을 통해 시각화</li>
+          <li>이동 수단과 소요 시간을 포함한 상세 경로 제공</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="image%2011.png" alt="여행 일정 추천 페이지 - 수정 요청" /></p>
+
+<p>여행 일정 추천 페이지 - 수정 요청</p>
+
+<p><img src="image%2012.png" alt="여행 일정 추천 페이지 - 수정 완료" /></p>
+
+<p>여행 일정 추천 페이지 - 수정 완료</p>
+
+<ul>
+  <li>여행 일정 추천 페이지
+    <ul>
+      <li>추천 일정 수정 요청
+        <ul>
+          <li>대화형 인터페이스를 통해 추천된 일정에 대한 수정 요청 가능</li>
+          <li>예: 특정 장소 변경, 일정 시간 조정, 추가 장소 요청 등</li>
+        </ul>
+      </li>
+      <li>실시간 반영
+        <ul>
+          <li>사용자가 입력한 수정 요청을 LLM을 통해 즉시 반영하여 수정된 일정 제공</li>
+          <li>자연어 기반 대화로 직관적인 수정 과정 지원</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="image%2013.png" alt="상세 일정 페이지 - 여행 확정" /></p>
+
+<p>상세 일정 페이지 - 여행 확정</p>
+
+<p><img src="image%2014.png" alt="상세 일정 페이지 - 여행 제목 입력" /></p>
+
+<p>상세 일정 페이지 - 여행 제목 입력</p>
+
+<p><img src="image%2015.png" alt="마이페이지" /></p>
+
+<p>마이페이지</p>
+
+<p><img src="image%2016.png" alt="마이페이지 - 저장한 일정 목록" /></p>
+
+<p>마이페이지 - 저장한 일정 목록</p>
+
+<ul>
+  <li>상세 일정 페이지
+    <ul>
+      <li>일정 저장 및 관리
+        <ul>
+          <li>확정된 여행 일정을 저장하여 마이페이지에서 확인 및 관리 가능</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>마이페이지
+    <ul>
+      <li>저장된 일정 목록
+        <ul>
+          <li>사용자가 저장한 여행 일정들을 카드 형태로 볼 수 있음</li>
+          <li>각 카드에는 여행 일정의 요약 정보(테마, 주요 장소 등)가 표시됨</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="image%2017.png" alt="상세 일정 페이지 - 체크리스트" /></p>
+
+<p>상세 일정 페이지 - 체크리스트</p>
+
+<p><img src="image%2018.png" alt="마이페이지 - 일정 정렬" /></p>
+
+<p>마이페이지 - 일정 정렬</p>
+
+<p><img src="image%2019.png" alt="로그아웃" /></p>
+
+<p>로그아웃</p>
+
+<ul>
+  <li>마이페이지
+    <ul>
+      <li>상세 일정 확인
+        <ul>
+          <li>카드를 클릭하면 해당 일정의 상세 일정 페이지로 이동하여 세부 정보 확인 가능</li>
+        </ul>
+      </li>
+      <li>검색 및 정렬 기능
+        <ul>
+          <li>저장된 일정들을 검색하거나 날짜, 테마 등 기준으로 정렬 가능</li>
+          <li>사용자 편의를 위한 직관적인 필터링 제공</li>
+        </ul>
+      </li>
+      <li>여행 체크리스트
+        <ul>
+          <li>각 일정에 대한 체크리스트 기능 이용 가능</li>
+          <li>기본 체크리스트 제공 및 사용자 맞춤형 항목 추가/수정 가능</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="설계-내용">설계 내용</h3>
+
+<ul>
+  <li><img src="/assets/images/projects/tamtam/image20.png" alt="" /> 프로젝트 구조도</li>
+  <li><img src="/assets/images/projects/tamtam/image21.png" alt="" /> ERD 설계도</li>
+  <li><img src="/assets/images/projects/tamtam/image22.png" alt="" /> 유저 플로우 차트</li>
+  <li><img src="/assets/images/projects/tamtam/image23.png" alt="" /> 프론트-백엔드 구조도</li>
+</ul>
+
+<hr />
+
+<h3 id="프로젝트를-통해-얻은-인사이트">프로젝트를 통해 얻은 인사이트</h3>
+
+<ul>
+  <li><strong>LLM과 RAG 기능의 효과적 연동</strong>: OpenAI의 LLM과 RAG(Retrieval-Augmented Generation) 기능을 연동하여 사용함으로써, 보다 정확한 정보를 제공할 수 있었음. 어떤 데이터를 DB 저장하는 것이 효율적인지 고민하게 되었음</li>
+  <li><strong>Spring Boot를 활용한 백엔드 개발</strong>: Spring Boot를 사용하여 RESTful API를 구축하면서, 백엔드 서비스의 개발과 관리가 더욱 효율적이고 안정적이라는 것을 경험함.</li>
+  <li><strong>랭체인(LangChain) 기능 활용</strong>: LangChain을 통해 자연어 처리의 효율성을 향상시킬 수 있었고, OpenAI의 프롬프터를 조작하여 다양한 기능을 수행하는 에이전트로 설정, 구현하는 경험을 통해 기술적인 이해도가 높아짐.</li>
+  <li><strong>협업 방식에 대한 새로운 이해와 재미</strong>: 다양한 배경을 가진 팀원들과의 협업을 통해 서로 다른 관점과 기술을 합치는 과정에서 많은 것을 배우고 즐길 수 있었음.</li>
+  <li><strong>유지 보수의 중요성 인식</strong>: 프로젝트의 지속적인 개선과 유지 보수 과정에서 발생할 수 있는 다양한 문제에 대처하면서, 유지 보수의 중요성과 이를 위한 체계적인 접근 방법을 깊이 이해하게 되었음. 이는 앞으로의 개발 프로젝트에 있어 유지 보수의 필요성에 대해 고민하게 해줌</li>
+</ul>
+
+<hr />
+
+<h3 id="github-link">Github Link</h3>
+
+<p>https://github.com/CSID-DGU/2024-2-SCS4031-jjambbong-3</p>
+
+<hr />]]></content><author><name>gaaaani(Seo Gaeun)</name></author><category term="Projects" /><category term="LLM" /><category term="Spring Boot" /><category term="Flask" /><category term="LangChain" /><category term="RAG" /><category term="Pinecone" /><category term="Jeju Travel" /><summary type="html"><![CDATA[LLM 기반 제주도 여행 계획 추천 서비스 ‘탐라, 탐나‘]]></summary></entry><entry><title type="html">GitHub Pages + Jekyll 블로그 만들기</title><link href="https://gaaaani.github.io/projects/2025/07/28/github-jekyll-setup.html" rel="alternate" type="text/html" title="GitHub Pages + Jekyll 블로그 만들기" /><published>2025-07-28T00:00:00+00:00</published><updated>2025-07-28T00:00:00+00:00</updated><id>https://gaaaani.github.io/projects/2025/07/28/github-jekyll-setup</id><content type="html" xml:base="https://gaaaani.github.io/projects/2025/07/28/github-jekyll-setup.html"><![CDATA[<p>개발 공부와 프로젝트 기록을 남기기 위한 기록용으로<br />
 <strong>GitHub Pages + Jekyll + YAT 테마</strong> 조합의 블로그를 구축했다.</p>
 
 <hr />
@@ -133,7 +459,30 @@
   <p><code class="language-plaintext highlighter-rouge">wdm</code>은 선택 사항이므로 없어도 서버 실행에는 영향 없음.</p>
 </blockquote>
 
-<p><del>(이 밖에도 gpt 친구와 함께 하면 설정에는 큰 어려움이 없을 것이다.)</del></p>
+<h4 id="-branch-설정">🔸 branch 설정</h4>
+<ul>
+  <li>로컬(4000번 포트)에서는 블로그 내용이 잘 보였지만 git push 후 index를 읽지 못하는 문제 발생</li>
+  <li>index.html -&gt; index.md : <strong>확장자 변경</strong></li>
+  <li>
+    <p>action 수 차례 실패 후 우여곡절 끝에 성공 but! 테마가 적용되지 않는 문제 발생 😫</p>
+
+    <div style="flex: 1; text-align: center;">
+  <img src="/assets/images/setup/error.png" alt="빈 화면" style="height: 200px; object-fit: cover; border-radius: 8px;" />
+</div>
+  </li>
+  <li>
+    <p>기본 구조
+-&gt; main에 push 한 경우 gh-pages 브랜치에서 _site 폴더가 자동 빌드되게 해야함!
+-&gt; github 설정 바꿔주기</p>
+
+    <div style="flex: 1; text-align: center;">
+  <img src="/assets/images/setup/setting.png" alt="설정" style="height: 450px; object-fit: cover; border-radius: 8px;" />
+</div>
+  </li>
+  <li>✅ <strong>GitHub &gt; repo &gt; Settings &gt; Pages &gt; Branch가 gh-pages로 설정!</strong></li>
+</ul>
+
+<p><del>(이 밖에도 gpt 친구와 함께 하면 설정에는 큰 어려움이 없을 것이다. 그럼에도 어려웠다…)</del></p>
 
 <hr />
 

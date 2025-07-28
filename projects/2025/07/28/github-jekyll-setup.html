@@ -748,7 +748,7 @@ function googleTranslateElementInit() {
 
 
 
-    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 5 mins</span>
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 6 mins</span>
   </div>
 <div class="post-tags">
 <a class="post-tag" href="/tags.html#GitHubPages">#GitHubPages</a><a class="post-tag" href="/tags.html#Jekyll">#Jekyll</a><a class="post-tag" href="/tags.html#YAT">#YAT</a>
@@ -1092,7 +1092,32 @@ function googleTranslateElementInit() {
   <p><code class="language-plaintext highlighter-rouge">wdm</code>은 선택 사항이므로 없어도 서버 실행에는 영향 없음.</p>
 </blockquote>
 
-<p><del>(이 밖에도 gpt 친구와 함께 하면 설정에는 큰 어려움이 없을 것이다.)</del></p>
+<h4 id="-branch-설정">🔸 branch 설정</h4>
+<ul>
+  <li>로컬(4000번 포트)에서는 블로그 내용이 잘 보였지만 git push 후 index를 읽지 못하는 문제 발생</li>
+  <li>index.html -&gt; index.md : <strong>확장자 변경</strong>
+</li>
+  <li>
+    <p>action 수 차례 실패 후 우여곡절 끝에 성공 but! 테마가 적용되지 않는 문제 발생 😫</p>
+
+    <div style="flex: 1; text-align: center;">
+  <img src="/assets/images/setup/error.png" alt="빈 화면" style="height: 200px; object-fit: cover; border-radius: 8px;">
+</div>
+  </li>
+  <li>
+    <p>기본 구조
+-&gt; main에 push 한 경우 gh-pages 브랜치에서 _site 폴더가 자동 빌드되게 해야함!
+-&gt; github 설정 바꿔주기</p>
+
+    <div style="flex: 1; text-align: center;">
+  <img src="/assets/images/setup/setting.png" alt="설정" style="height: 450px; object-fit: cover; border-radius: 8px;">
+</div>
+  </li>
+  <li>✅ <strong>GitHub &gt; repo &gt; Settings &gt; Pages &gt; Branch가 gh-pages로 설정!</strong>
+</li>
+</ul>
+
+<p><del>(이 밖에도 gpt 친구와 함께 하면 설정에는 큰 어려움이 없을 것이다. 그럼에도 어려웠다…)</del></p>
 
 <hr>
 
@@ -1191,8 +1216,8 @@ function googleTranslateElementInit() {
 
 </article>
 <div class="post-nav">
-<a class="previous" href="/blog/2025/07/27/my-first-post.html" title="어서오세요">
-          <div>어서오세요</div>
+<a class="previous" href="/projects/2025/07/28/2024-tamna.html" title="🍊 LLM 기반 제주여행 추천플랫폼 - 탐라,탐나">
+          <div>🍊 LLM 기반 제주여행 추천플랫폼 - 탐라,탐나</div>
         </a><a class="next" href="/markdown/2025/07/28/test-markdown.html" title="Test">
           <div>Test</div>
         </a>
@@ -1211,6 +1236,14 @@ function googleTranslateElementInit() {
 <li class="">
           <a class="post-link" href="/markdown/2025/07/28/test-markdown.html" title="Test">
             Test<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+        </li>
+<li class="">
+          <a class="post-link" href="/projects/2025/07/28/2024-tamna.html" title="🍊 LLM 기반 제주여행 추천플랫폼 - 탐라,탐나">
+            🍊 LLM 기반 제주여행 추천플랫폼 - 탐라,탐나<span class="post-badges">
   <span class="post-badge badge-top">TOP</span>
   <span class="post-badge badge-new">NEW</span>
 </span>
