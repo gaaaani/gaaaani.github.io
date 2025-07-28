@@ -2,7 +2,7 @@ name: Build and Deploy Jekyll Site
 
 on:
   push:
-    branches: [main]  # 또는 master, 사용하는 기본 브랜치 이름으로
+    branches: [main]  
 
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'  # 로컬에서 사용한 Ruby 버전에 맞춰줘
+          ruby-version: '3.4.4'  # 로컬 Ruby 버전
           bundler-cache: true
 
       - name: Install dependencies

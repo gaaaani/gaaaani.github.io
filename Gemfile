@@ -13,6 +13,9 @@ gem "bigdecimal"
 # Ruby 3.5 이후 빠질 logger
 gem "logger"
 
+# 최신 Sass 지원을 위한 SCSS 컴파일러
+gem "sassc"
+
 # 테마에서 쓰는 기본 플러그인
 gem "jekyll-feed"
 gem "jekyll-seo-tag"
