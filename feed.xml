@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://gaaaani.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gaaaani.github.io/" rel="alternate" type="text/html" /><updated>2025-07-28T05:27:33+00:00</updated><id>https://gaaaani.github.io/feed.xml</id><title type="html">My awesome …</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>gaaaani(Seo Gaeun)</name></author><entry><title type="html">GitHub Pages + Jekyll 블로그 만들기</title><link href="https://gaaaani.github.io/projects/2025/07/28/github-jekyll-setup.html" rel="alternate" type="text/html" title="GitHub Pages + Jekyll 블로그 만들기" /><published>2025-07-28T00:00:00+00:00</published><updated>2025-07-28T00:00:00+00:00</updated><id>https://gaaaani.github.io/projects/2025/07/28/github-jekyll-setup</id><content type="html" xml:base="https://gaaaani.github.io/projects/2025/07/28/github-jekyll-setup.html"><![CDATA[<p>개발 공부와 프로젝트 기록을 남기기 위한 기록용으로<br />
+<strong>GitHub Pages + Jekyll + YAT 테마</strong> 조합의 블로그를 구축했다.</p>
+
+<hr />
+
+<h2 id="-사용한-기술">💡 사용한 기술</h2>
+
+<ul>
+  <li>GitHub Pages</li>
+  <li>Jekyll</li>
+  <li>YAT 테마</li>
+</ul>
+
+<hr />
+
+<h2 id="-구축-순서">🧭 구축 순서</h2>
+
+<h3 id="1-github-저장소-생성">1. GitHub 저장소 생성</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">닉네임.github.io</code> 형식으로 새 저장소 생성</li>
+  <li>웹에서 접속 시 자동으로 GitHub Pages로 인식됨</li>
+</ul>
+
+<div style="display: flex; gap: 16px;">
+  <div style="flex: 1; text-align: center;">
+    <img src="/assets/images/setup/repo.jpeg" alt="레포 생성" style="height: 200px; object-fit: cover; border-radius: 8px;" />
+    <p>레포 생성</p>
+  </div>
+  <div style="flex: 1; text-align: center;">
+    <img src="/assets/images/setup/repo1.jpeg" alt="io 확인" style="height: 200px; object-fit: cover; border-radius: 8px;" />
+    <p>io 확인</p>
+  </div>
+</div>
+
+<hr />
+
+<h3 id="2-개발-환경-설정">2. 개발 환경 설정</h3>
+
+<h4 id="-ruby-설치">💎 Ruby 설치</h4>
+
+<ul>
+  <li><a href="https://rubyinstaller.org/downloads/">RubyInstaller</a> 에서 최신 버전 설치</li>
+</ul>
+
+<h4 id="-jekyll-설치">📦 Jekyll 설치</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>jekyll
+</code></pre></div></div>
+
+<h4 id="-bundler-설치">📦 Bundler 설치</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>bundler
+</code></pre></div></div>
+
+<ul>
+  <li>Bundler는 Ruby의 의존성 관리 도구로, gem을 버전별로 관리할 수 있게 해줌</li>
+</ul>
+
+<hr />
+
+<h3 id="3-jekyll-테마-설정">3. Jekyll 테마 설정</h3>
+
+<ul>
+  <li>YAT 테마를 클론하거나 압축 해제 후 프로젝트 루트에 파일 복사</li>
+  <li><code class="language-plaintext highlighter-rouge">_config.yml</code>에서 <code class="language-plaintext highlighter-rouge">title</code>, <code class="language-plaintext highlighter-rouge">author</code>, <code class="language-plaintext highlighter-rouge">email</code>, <code class="language-plaintext highlighter-rouge">url</code> 등 정보 수정</li>
+  <li>테마가 잘 적용되는지 확인</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install
+</span>bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">http://localhost:4000</code> 접속 → 로컬 서버 확인 가능</li>
+  <li><code class="language-plaintext highlighter-rouge">_config.yml</code> 수정 시에는 반드시 서버 재시작 필요</li>
+</ul>
+
+<hr />
+
+<h3 id="-발생했던-이슈와-해결-방법">❗ 발생했던 이슈와 해결 방법</h3>
+
+<h4 id="jekyll-파일-위치">Jekyll 파일 위치</h4>
+<ul>
+  <li>Jekyll은 빌드 시 아래와 같은 구조를 찾고 자동으로 실행하는데, 루트 디렉토리에 없다면 제대로 실행이 안될 수도 있음
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  .
+  ├── _config.yml        ✅ 전역 설정 파일
+  ├── _posts/            ✅ 글 모음 폴더
+  ├── _layouts/          ✅ 레이아웃 정의
+  ├── index.html         ✅ 메인 페이지
+  └── 기타 리소스
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="-bigdecimal-loaderror">🔸 <code class="language-plaintext highlighter-rouge">bigdecimal</code> LoadError</h4>
+<ul>
+  <li>오류 메시지:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cannot load such file -- bigdecimal
+</code></pre></div>    </div>
+  </li>
+  <li>해결 방법:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>bigdecimal
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="-logger-warning-ruby-35-대비">🔸 <code class="language-plaintext highlighter-rouge">logger</code> warning (Ruby 3.5 대비)</h4>
+<ul>
+  <li>경고 메시지:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>logger was loaded from the standard library, but will no longer be part of the default gems
+</code></pre></div>    </div>
+  </li>
+  <li>해결 방법: <code class="language-plaintext highlighter-rouge">Gemfile</code>에 아래 내용 추가
+    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"logger"</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="-wdm-설치-실패-windows">🔸 <code class="language-plaintext highlighter-rouge">wdm</code> 설치 실패 (Windows)</h4>
+<ul>
+  <li>에러 메시지:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>An error occurred while installing wdm
+</code></pre></div>    </div>
+  </li>
+  <li>해결 방법: <code class="language-plaintext highlighter-rouge">Gemfile</code>에서 해당 라인을 주석 처리
+    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># gem "wdm", "~&gt; 0.1.1" if Gem.win_platform?</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">wdm</code>은 선택 사항이므로 없어도 서버 실행에는 영향 없음.</p>
+</blockquote>
+
+<p><del>(이 밖에도 gpt 친구와 함께 하면 설정에는 큰 어려움이 없을 것이다.)</del></p>
+
+<hr />
+
+<h3 id="4-내용-커스터마이즈">4. 내용 커스터마이즈</h3>
+
+<h4 id="-header-설정">📌 header 설정</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_config.yml</code>에 <code class="language-plaintext highlighter-rouge">header_pages</code> 옵션으로 상단 메뉴 구성</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">header_pages</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">index.html</span>
+  <span class="pi">-</span> <span class="s">about.md</span>
+  <span class="pi">-</span> <span class="s">projects.md</span>
+  <span class="pi">-</span> <span class="s">categories.html</span>
+  <span class="pi">-</span> <span class="s">tags.html</span>
+</code></pre></div></div>
+
+<h4 id="-기본-배너-설정">📌 기본 배너 설정</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_config.yml</code>의 <code class="language-plaintext highlighter-rouge">defaults</code> 설정으로 홈 배너 및 문구 설정</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">defaults</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">scope</span><span class="pi">:</span>
+      <span class="na">path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s2">"</span><span class="s">home"</span>
+    <span class="na">values</span><span class="pi">:</span>
+      <span class="na">heading</span><span class="pi">:</span> <span class="s2">"</span><span class="s">환영합니다!"</span>
+      <span class="na">subheading</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Gaaaani의</span><span class="nv"> </span><span class="s">개발</span><span class="nv"> </span><span class="s">블로그입니다</span><span class="nv"> </span><span class="s">✨"</span>
+      <span class="na">banner</span><span class="pi">:</span> <span class="s2">"</span><span class="s">default"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="5-첫-포스트-작성">5. 첫 포스트 작성</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_posts/</code> 폴더 안에 아래 형식으로 Markdown 파일 작성</li>
+  <li>아래 예시처럼 글 위에서 형식을 지정해줘야 함!</li>
+</ul>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">블로그</span><span class="nv"> </span><span class="s">첫</span><span class="nv"> </span><span class="s">글"</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Jekyll</span><span class="nv"> </span><span class="s">+</span><span class="nv"> </span><span class="s">YAT</span><span class="nv"> </span><span class="s">테마</span><span class="nv"> </span><span class="s">적용</span><span class="nv"> </span><span class="s">완료!"</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">Gaaaani</span>
+<span class="na">categories</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">Blog</span><span class="pi">,</span> <span class="nv">Dev</span><span class="pi">]</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">Jekyll</span><span class="pi">,</span> <span class="nv">YAT</span><span class="pi">,</span> <span class="nv">GitHubPages</span><span class="pi">]</span>
+<span class="na">banner</span><span class="pi">:</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">/assets/images/banner.jpg</span>
+  <span class="na">height</span><span class="pi">:</span> <span class="s2">"</span><span class="s">50vh"</span>
+  <span class="na">opacity</span><span class="pi">:</span> <span class="m">0.8</span>
+  <span class="na">background</span><span class="pi">:</span> <span class="s2">"</span><span class="s">rgba(0,0,0,0.4)"</span>
+  <span class="na">heading_style</span><span class="pi">:</span> <span class="s2">"</span><span class="s">font-size:</span><span class="nv"> </span><span class="s">3em;</span><span class="nv"> </span><span class="s">font-weight:</span><span class="nv"> </span><span class="s">bold;"</span>
+  <span class="na">subheading_style</span><span class="pi">:</span> <span class="s2">"</span><span class="s">color:</span><span class="nv"> </span><span class="s">#ffcc00;"</span>
+<span class="na">top</span><span class="pi">:</span> <span class="m">1</span>
+<span class="na">sidebar</span><span class="pi">:</span> <span class="pi">[]</span>
+<span class="nn">---</span>
+
+새로운 포스트! 🎉  
+<span class="p">
+-</span> YAT 테마 적용 완료  
+<span class="p">-</span> GitHub Pages 배포 완료  
+<span class="p">-</span> 이제부터 개발 공부 기록을 차근차근 올릴 예정!
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-githubio와-친해지기">✅ github.io와 친해지기</h3>
+
+<p>Markdown 기반으로 블로그를 구성하니 <strong>글 작성과 관리가 간편</strong>하고,<br />
+노션과도 비슷한 느낌이라 접근 하기 좋고, github를 활용하면서 <strong>멋진 경험</strong>을 할 수 있는 장점이 있는 것 같다.  <br />
+특히 커스터마이징이 자유로워 나만의 블로그로 꾸미기 좋다. 😉<br />
+<del>(앞으로 활용하면서 알게되겠지만..)</del>  <br />
+이제부터는 꾸준한 기술 정리, 프로젝트 아카이빙을 이 블로그를 통해 이어갈 계획이다. ✨</p>
+
+<hr />
+
+<h2 id="-참고-자료">🔗 참고 자료</h2>
+
+<ul>
+  <li>위키독스 GitHub 블로그 만들기: <a href="https://wikidocs.net/278085">https://wikidocs.net/278085</a></li>
+  <li>YAT 테마: <a href="https://github.com/jeffreytse/jekyll-theme-yat">https://github.com/jeffreytse/jekyll-theme-yat</a></li>
+</ul>]]></content><author><name>Gaaaani</name></author><category term="Projects" /><category term="GitHubPages" /><category term="Jekyll" /><category term="YAT" /><summary type="html"><![CDATA[개발 공부와 프로젝트 기록을 남기기 위한 기록용으로 GitHub Pages + Jekyll + YAT 테마 조합의 블로그를 구축했다.]]></summary></entry><entry><title type="html">Test</title><link href="https://gaaaani.github.io/markdown/2025/07/28/test-markdown.html" rel="alternate" type="text/html" title="Test" /><published>2025-07-28T00:00:00+00:00</published><updated>2025-07-28T00:00:00+00:00</updated><id>https://gaaaani.github.io/markdown/2025/07/28/test-markdown</id><content type="html" xml:base="https://gaaaani.github.io/markdown/2025/07/28/test-markdown.html"><![CDATA[<p>여기서 마크다운 형식으로 수정할 수 있습니다. 멋지게 사용해보세요<br />
+You can write regular <a href="https://markdowntutorial.com/">markdown</a> here and Jekyll will automatically convert it to a nice webpage.  I strongly encourage you to <a href="http://markdowntutorial.com/">take 5 minutes to learn how to write in markdown</a> - it’ll teach you how to transform regular text into bold/italics/headings/tables/etc.</p>
+
+<p><strong>Here is some bold text</strong></p>
+
+<h2 id="here-is-a-secondary-heading">Here is a secondary heading</h2>
+
+<p>Here’s a useless table:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Number</th>
+      <th style="text-align: left">Next number</th>
+      <th style="text-align: left">Previous number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Five</td>
+      <td style="text-align: left">Six</td>
+      <td style="text-align: left">Four</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Ten</td>
+      <td style="text-align: left">Eleven</td>
+      <td style="text-align: left">Nine</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Seven</td>
+      <td style="text-align: left">Eight</td>
+      <td style="text-align: left">Six</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Two</td>
+      <td style="text-align: left">Three</td>
+      <td style="text-align: left">One</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>How about a yummy crepe?</p>
+
+<p><img src="https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg" alt="Crepe" /></p>
+
+<p>It can also be centered!</p>
+
+<p><img src="https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg" alt="Crepe" class="center-block" /></p>
+
+<p>Here’s a code chunk:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var foo = function(x) {
+  return(x + 5);
+}
+foo(3)
+</code></pre></div></div>
+
+<p>And here is the same code with syntax highlighting:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nf">foo</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>And here is the same code yet again but with line numbers:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nf">foo</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="boxes">Boxes</h2>
+<p>You can add notification, warning and error boxes like this:</p>
+
+<h3 id="notification">Notification</h3>
+
+<p class="box-note"><strong>Note:</strong> This is a notification box.</p>
+
+<h3 id="warning">Warning</h3>
+
+<p class="box-warning"><strong>Warning:</strong> This is a warning box.</p>
+
+<h3 id="error">Error</h3>
+
+<p class="box-error"><strong>Error:</strong> This is an error box.</p>
+
+<h3 id="emoji">Emoji</h3>
+
+<p>This single quote code <code class="language-plaintext highlighter-rouge">inet:email:message:to</code> will not be parsed to emoji icon
+:+1:.</p>]]></content><author><name>gaaaani(Seo Gaeun)</name></author><category term="markdown" /><category term="test" /><summary type="html"><![CDATA[여기서 마크다운 형식으로 수정할 수 있습니다. 멋지게 사용해보세요 You can write regular markdown here and Jekyll will automatically convert it to a nice webpage. I strongly encourage you to take 5 minutes to learn how to write in markdown - it’ll teach you how to transform regular text into bold/italics/headings/tables/etc.]]></summary></entry><entry><title type="html">어서오세요</title><link href="https://gaaaani.github.io/blog/2025/07/27/my-first-post.html" rel="alternate" type="text/html" title="어서오세요" /><published>2025-07-27T00:00:00+00:00</published><updated>2025-07-27T00:00:00+00:00</updated><id>https://gaaaani.github.io/blog/2025/07/27/my-first-post</id><content type="html" xml:base="https://gaaaani.github.io/blog/2025/07/27/my-first-post.html"><![CDATA[<p>이건 내 <strong>블로그 첫 글</strong>입니다! 🎉</p>
+
+<p>이제부터 개발 공부 기록을 차근차근 올릴 예정!</p>
+
+<p>이곳은 이제 내 자킬앤루비 어쩌구.
+안녕하세요?
+저는 누구 입니다.</p>]]></content><author><name>Gaaaani</name></author><category term="Blog" /><category term="Jekyll" /><category term="YAT" /><summary type="html"><![CDATA[이건 내 블로그 첫 글입니다! 🎉]]></summary></entry></feed>
