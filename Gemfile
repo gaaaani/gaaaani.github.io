@@ -2,11 +2,12 @@
 
 source "https://rubygems.org"
 
-# Jekyll 기본 엔진
+# Jekyll 및 yat 테마 사용
 gem "jekyll", "~> 4.4.1"
-
-# gem "github-pages", group: :jekyll_plugins
-
+gem 'webrick', '~> 1.7'
+gem "jekyll-theme-yat"          # optional for local fallback
+gem "jekyll-remote-theme"     
+ 
 # Liquid 필터에 필요한 BigDecimal
 gem "bigdecimal"
 
@@ -22,10 +23,9 @@ gem "jekyll-seo-tag"
 gem "jekyll-sitemap"
 gem "jekyll-paginate"
 gem "jekyll-spaceship"
-gem "jekyll-remote-theme"
+
+# Gemfile
+gem 'ostruct'
 
 # Markdown 엔진
 gem "kramdown", ">= 2.3.1"
-
-# Windows 환경에서 Jekyll 성능 개선용 
-# gem "wdm", "~> 0.1.1" if Gem.win_platform?
